@@ -12,7 +12,7 @@ List<Skill> skills = [
   ),
   Skill(
     skill: "C/C++",
-    percentage: 81,
+    percentage: 80,
   ),
   Skill(
     skill: "Flutter",
