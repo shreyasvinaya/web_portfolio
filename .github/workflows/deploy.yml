@@ -39,6 +39,7 @@ jobs:
         # type configurations: your user.email and user.name followed lines 
         # git config --global user.email your_email 
         # git config --global user.name your_name 
+        git config --global init.defaultBranch main
         git config --global user.email vinaya.shreyas@gmail.com
         git config --global user.name shreyasvinaya
         git status
