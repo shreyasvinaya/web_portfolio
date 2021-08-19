@@ -5,6 +5,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/design_process.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final List<DesignProcess> designProcesses = [
   DesignProcess(
@@ -68,7 +69,10 @@ class CvSection extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  launch(
+                      'https://docs.google.com/document/d/1KuoOJpmF7P8fYkyMzkxB1jiz8gLb2G8m/edit?usp=sharing&ouid=109487315670870896899&rtpof=true&sd=true');
+                },
                 child: MouseRegion(
                   cursor: SystemMouseCursors.click,
                   child: Text(

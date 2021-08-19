@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
@@ -47,7 +48,7 @@ class IosAppAd extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "IOS APP",
+                          "FLUTTER APP",
                           style: GoogleFonts.oswald(
                             color: kPrimaryColor,
                             fontWeight: FontWeight.w900,
@@ -58,7 +59,7 @@ class IosAppAd extends StatelessWidget {
                           height: 15.0,
                         ),
                         Text(
-                          "UNIVERSAL\nSMART HOME APP",
+                          "TRIBBLE",
                           style: GoogleFonts.oswald(
                             color: Colors.white,
                             fontWeight: FontWeight.w900,
@@ -70,7 +71,7 @@ class IosAppAd extends StatelessWidget {
                           height: 10.0,
                         ),
                         Text(
-                          "This is a random text about the project, I should have used the regular lorem ipsum text, but I am too lazy to search for that. This should be long enough",
+                          "A car booking app with Firebase authentication and Google Maps integration",
                           style: TextStyle(
                             color: kCaptionColor,
                             height: 1.5,
@@ -94,10 +95,13 @@ class IosAppAd extends StatelessWidget {
                                   horizontal: 28.0,
                                 ),
                                 child: TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    launch(
+                                        'https://github.com/shreyasvinaya/tribble');
+                                  },
                                   child: Center(
                                     child: Text(
-                                      "EXPLORE MORE",
+                                      "VIEW CODE",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 13.0,
@@ -111,32 +115,32 @@ class IosAppAd extends StatelessWidget {
                             SizedBox(
                               width: 10.0,
                             ),
-                            MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                    color: kPrimaryColor,
-                                  ),
-                                ),
-                                height: 48.0,
-                                padding: EdgeInsets.symmetric(horizontal: 28.0),
-                                child: TextButton(
-                                  onPressed: () {},
-                                  child: Center(
-                                    child: Text(
-                                      "NEXT APP",
-                                      style: TextStyle(
-                                        color: kPrimaryColor,
-                                        fontSize: 13.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            )
+                            // MouseRegion(
+                            //   cursor: SystemMouseCursors.click,
+                            //   child: Container(
+                            //     decoration: BoxDecoration(
+                            //       borderRadius: BorderRadius.circular(8.0),
+                            //       border: Border.all(
+                            //         color: kPrimaryColor,
+                            //       ),
+                            //     ),
+                            //     height: 48.0,
+                            //     padding: EdgeInsets.symmetric(horizontal: 28.0),
+                            //     child: TextButton(
+                            //       onPressed: () {},
+                            //       child: Center(
+                            //         child: Text(
+                            //           "NEXT APP",
+                            //           style: TextStyle(
+                            //             color: kPrimaryColor,
+                            //             fontSize: 13.0,
+                            //             fontWeight: FontWeight.bold,
+                            //           ),
+                            //         ),
+                            //       ),
+                            //     ),
+                            //   ),
+                            // )
                           ],
                         )
                       ],

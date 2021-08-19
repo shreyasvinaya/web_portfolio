@@ -4,13 +4,18 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/header_item.dart';
+import 'package:web_portfolio/pages/home/components/carousel.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/globals.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 List<HeaderItem> headerItems = [
   // HeaderItem(title: "HOME", onTap: () {}),
-  HeaderItem(title: "MY INTRO", onTap: () {}),
+  HeaderItem(
+      title: "MY INTRO",
+      onTap: () {
+        Carousel();
+      }),
   HeaderItem(title: "PROJECTS", onTap: () {}),
   HeaderItem(title: "SKILLS", onTap: () {}),
   // HeaderItem(title: "TESTIMONIALS", onTap: () {}),

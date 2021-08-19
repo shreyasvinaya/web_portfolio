@@ -5,31 +5,35 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/education.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final List<Education> educationList = [
   Education(
     description: "Birla Institute of Technology and Science, Goa ",
-    linkName: "www.....",
+    subtitle: "BE Computer Science + MSc Chemistry",
+    linkName: "https://www.bits-pilani.ac.in/goa/",
     period: "2020 - PRESENT",
   ),
   Education(
-    description:
-        "This is a sample education and details about it is stated below.This is a sample education and details about it is stated below",
-    linkName: "site here pls",
-    period: "2018 - 2019",
+    description: "Sri Kumarans Childrens Home, CBSE",
+    subtitle: 'High School Diploma in Computer Science',
+    linkName: "http://kumarans.org",
+    period: "2008 - 2020",
   ),
-  Education(
-    description:
-        "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
-    linkName: "site here pls",
-    period: "2017 - 2018",
-  ),
-  Education(
-    description:
-        "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
-    linkName: "site here pls",
-    period: "2016 - 2017",
-  ),
+  // Education(
+  //   description:
+  //       "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
+  //   subtitle: 'sample',
+  //   linkName: "site here pls",
+  //   period: "2017 - 2018",
+  // ),
+  // Education(
+  //   description:
+  //       "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
+  //   subtitle: 'sample',
+  //   linkName: "site here pls",
+  //   period: "2016 - 2017",
+  // ),
 ];
 
 class EducationSection extends StatelessWidget {
@@ -97,7 +101,7 @@ class EducationSection extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  education.period,
+                                  education.description,
                                   style: GoogleFonts.oswald(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w700,
@@ -108,7 +112,18 @@ class EducationSection extends StatelessWidget {
                                   height: 5.0,
                                 ),
                                 Text(
-                                  education.description,
+                                  education.subtitle,
+                                  style: GoogleFonts.oswald(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 15.0,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text(
+                                  education.period,
                                   maxLines: 4,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -122,7 +137,9 @@ class EducationSection extends StatelessWidget {
                                 MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: GestureDetector(
-                                    onTap: () {},
+                                    onTap: () {
+                                      launch(education.linkName);
+                                    },
                                     child: Text(
                                       education.linkName,
                                       style: TextStyle(

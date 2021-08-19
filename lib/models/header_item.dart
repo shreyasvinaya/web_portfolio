@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class HeaderItem {
   final String title;
-  final VoidCallback onTap;
+  final Function onTap;
   final bool isButton;
 
   HeaderItem({
