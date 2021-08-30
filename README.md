@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/shreyasvinaya/web_portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/shreyasvinaya/web_portfolio/actions/workflows/deploy.yml)
+
 # Flutter Web Portfolio
 A Personal Portfolio website built with flutter and hosted on Github Pages
 ## Features
